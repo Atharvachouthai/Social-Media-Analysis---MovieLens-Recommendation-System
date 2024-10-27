@@ -23,29 +23,32 @@ The main objectives of this project are:
 
 Methodology
 
-  1. Data Preprocessing: A down-sampling approach reduced <img width="455" alt="Screenshot 2024-10-27 at 5 13 19 PM" src="https://github.com/user-attachments/assets/d960c7f1-a45b-466f-932a-7b8ce47fc95b">
-the network to a manageable subset of 6,490 nodes and 21,213 edges.
+  1. Data Preprocessing: A down-sampling approach reduced the network to a manageable subset of 6,490 nodes and 21,213 edges.
 
   2. Community Detection:
+      ![output_8_1](https://github.com/user-attachments/assets/403e55a7-15a8-4a68-a6f6-a72b925f65e3)
+      ![output_8_3](https://github.com/user-attachments/assets/06eb9260-01d5-4370-a9ca-280633acba1c)
+      ![output_8_5](https://github.com/user-attachments/assets/6b110640-fd2d-4e36-8361-1ceb9a565bd1)
+     
 
       Algorithm: Louvain method was used for hierarchical community detection.
       Levels: Generated three levels of communities, with a final modularity score of 0.377 at the highest level, indicating well-defined user interests and genre groupings.
   
-  3. Link Prediction:
+  4. Link Prediction:
 
       Using metrics like the Jaccard Index and Resource Allocation Index, the analysis revealed user pairs with similar movie tastes, pointing to potential niche recommendations.
 
-  4. Topic Modeling:
+  5. Topic Modeling:
 
       LDA: Applied to reveal four major themes: War/Film Noir, Family Fantasy, Drama/Comedy, and Thriller/Action. This provides thematic insights that complement genre-based recommendations.
      
-  5. Collaborative Filtering for Recommendation:
+  6. Collaborative Filtering for Recommendation:
 
       a. KNNBasic Algorithm: Implemented using Surprise library, with Pearson correlation as the similarity measure.
      
       b. Recommendation Generation: Predicts ratings for unviewed movies, filtering out already rated movies to suggest fresh recommendations.
 
-  6. Results
+  7. Results
      
       Evaluation:
 
@@ -53,6 +56,6 @@ the network to a manageable subset of 6,490 nodes and 21,213 edges.
      
         b. Test RMSE: Consistent performance on the test set with an RMSE of 0.661, confirming the model’s reliability on unseen data.
 
-  7. Conclusion
+  8. Conclusion
         This project effectively combines network analysis, topic modeling, and collaborative filtering to enhance movie recommendations. The system can dynamically adapt to user     preferences and offer tailored suggestions, improving user experience. Future improvements could involve refining community detection and incorporating more advanced link prediction techniques to capture latent user interests further.
 
